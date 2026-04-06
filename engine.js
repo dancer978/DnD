@@ -7,13 +7,14 @@
 import { scenario as recruiterScenario } from "./scenarios/recruiter.js";
 import { scenario as hrdScenario } from "./scenarios/hrd.js";
 import { scenario as ceoScenario } from "./scenarios/ceo.js";
+import { scenario as ownerScenario } from "./scenarios/owner.js";
 
 // ─── Registry ───────────────────────────────────────────────────────────────
 const SCENARIOS = {
   recruiter: recruiterScenario,
   hrd: hrdScenario,
   ceo: ceoScenario,
-  // owner: ownerScenario,
+  owner: ownerScenario,
 };
 
 // ─── State ───────────────────────────────────────────────────────────────────
