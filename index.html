@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D&D: Аналитика Рынка Труда</title>
+    <meta
+      name="description"
+      content="Интерактивный квест: найди решение своей HR-задачи в стиле D&D"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Fonts: MedievalSharp for titles, Inter for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=IM+Fell+English:ital@0;1&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root">
+      <!-- Header -->
+      <header class="site-header">
+        <div class="header-inner">
+          <span class="header-logo">⚔️ АРТ</span>
+          <span class="header-tagline">Аналитика Рынка Труда</span>
+        </div>
+      </header>
+
+      <!-- Main app container — engine renders here -->
+      <main id="app">
+        <div class="loading">Загрузка квеста...</div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="site-footer">
+        <p>
+          <a href="https://luktrud.ru" target="_blank" rel="noopener">luktrud.ru</a>
+          &nbsp;·&nbsp; Сергей Лукьяненко
+        </p>
+      </footer>
+    </div>
+
+    <script type="module">
+      import { init } from "./engine.js";
+      window.addEventListener("DOMContentLoaded", init);
+    </script>
+  </body>
+</html>
