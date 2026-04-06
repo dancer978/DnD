@@ -8,6 +8,10 @@ import { scenario as recruiterScenario } from "./scenarios/recruiter.js";
 import { scenario as hrdScenario } from "./scenarios/hrd.js";
 import { scenario as ceoScenario } from "./scenarios/ceo.js";
 import { scenario as ownerScenario } from "./scenarios/owner.js";
+import { scenario as strategistScenario } from "./scenarios/strategist.js";
+import { scenario as cfoScenario } from "./scenarios/cfo.js";
+import { scenario as cooScenario } from "./scenarios/coo.js";
+import { scenario as ccoScenario } from "./scenarios/cco.js";
 
 // ─── Registry ───────────────────────────────────────────────────────────────
 const SCENARIOS = {
@@ -15,6 +19,10 @@ const SCENARIOS = {
   hrd: hrdScenario,
   ceo: ceoScenario,
   owner: ownerScenario,
+  strategist: strategistScenario,
+  cfo: cfoScenario,
+  coo: cooScenario,
+  cco: ccoScenario,
 };
 
 // ─── State ───────────────────────────────────────────────────────────────────
