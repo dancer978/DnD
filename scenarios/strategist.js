@@ -250,7 +250,7 @@ export const scenario = {
           "Исследование рынка труда под стратегическую задачу: регион, отрасль, дефицитные роли. Данные и выводы для принятия решений.",
         price: "от 400 000 ₽",
         cta: "Обсудить исследование",
-        url: "#contact",
+        url: "https://luktrud.ru/#product?utm_source=quiz",
       },
     },
 
@@ -267,7 +267,7 @@ export const scenario = {
           "HR-стратегия, синхронизированная с бизнес-целями и планами роста. Workforce planning, прогноз дефицитов, план действий.",
         price: "от 1 200 000 ₽",
         cta: "Обсудить стратегию",
-        url: "#contact",
+        url: "https://luktrud.ru/#product?utm_source=quiz",
       },
     },
 
@@ -284,7 +284,7 @@ export const scenario = {
           "Регулярные данные по рынку труда для стратегического планирования: тренды, дефицитные компетенции, динамика конкурентной среды.",
         price: "800 000 ₽ / год",
         cta: "Узнать подробнее",
-        url: "#contact",
+        url: "https://luktrud.ru/#product?utm_source=quiz",
       },
     },
   },

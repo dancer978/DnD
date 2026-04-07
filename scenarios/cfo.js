@@ -212,7 +212,7 @@ export const scenario = {
           "Анализ HR-расходов в контексте рынка: бенчмарки, ROI, риски оптимизации. Аргументация для финансовых решений.",
         price: "от 250 000 ₽",
         cta: "Записаться на сессию",
-        url: "#contact",
+        url: "https://luktrud.ru/#product?utm_source=quiz",
       },
     },
 
@@ -229,7 +229,7 @@ export const scenario = {
           "Данные по HR-расходам, структуре бюджетов и рыночным бенчмаркам в вашей отрасли. Основа для финансовых решений.",
         price: "50–120 000 ₽",
         cta: "Получить отчёт",
-        url: "#contact",
+        url: "https://luktrud.ru/#product?utm_source=quiz",
       },
     },
   },

@@ -262,12 +262,23 @@ function initLeadMagnet() {
     document.getElementById("lm-contact-form").classList.remove("hidden");
   });
 
-  document.getElementById("lm-send").addEventListener("click", () => {
+  document.getElementById("lm-send").addEventListener("click", async () => {
     const contact = document.getElementById("lm-contact").value.trim();
     if (!contact) return;
-    // In production: POST to backend or Telegram bot
-    console.log("Lead captured:", contact);
-    document.getElementById("lm-send").style.display = "none";
+    const industry = document.getElementById("lm-industry").value.trim();
+    const btn = document.getElementById("lm-send");
+    btn.disabled = true;
+    btn.textContent = "Отправляем...";
+    try {
+      await fetch("https://formspree.io/f/xpqobvlq", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({ email: contact, industry, character: state.characterId }),
+      });
+    } catch (_) {
+      // silent fail — lead still shown as sent to user
+    }
+    btn.style.display = "none";
     document.getElementById("lm-thanks").classList.remove("hidden");
   });
 }
