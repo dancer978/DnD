@@ -335,7 +335,7 @@ export const scenario = {
           "Разбор вашей конкретной ситуации с найма: рынок, ставки, причины потери кандидатов. Конкретные рекомендации без воды.",
         price: "от 250 000 ₽",
         cta: "Записаться на сессию",
-        url: "https://luktrud.ru/#product?utm_source=quiz",
+        url: "https://luktrud.ru/?utm_source=quiz#product",
       },
     },
 
@@ -352,7 +352,7 @@ export const scenario = {
           "Актуальные данные по зарплатам, структуре офферов и трендам найма в вашей отрасли. Готово к использованию сразу после получения.",
         price: "50–120 000 ₽",
         cta: "Получить отчёт",
-        url: "https://luktrud.ru/#product?utm_source=quiz",
+        url: "https://luktrud.ru/?utm_source=quiz#product",
       },
     },
 
@@ -371,7 +371,7 @@ export const scenario = {
           "Исследование рынка труда под задачи вашего клиента: методология, данные, выводы. Можно перепродавать как часть своего продукта.",
         price: "от 400 000 ₽",
         cta: "Обсудить исследование",
-        url: "https://luktrud.ru/#product?utm_source=quiz",
+        url: "https://luktrud.ru/?utm_source=quiz#product",
       },
     },
   },

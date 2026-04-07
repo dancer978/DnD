@@ -212,7 +212,7 @@ export const scenario = {
           "HR-стратегия с фокусом на удержание: EVP, системы роста, планирование преемственности для ключевых операционных ролей.",
         price: "от 1 200 000 ₽",
         cta: "Обсудить стратегию",
-        url: "https://luktrud.ru/#product?utm_source=quiz",
+        url: "https://luktrud.ru/?utm_source=quiz#product",
       },
     },
 
@@ -229,7 +229,7 @@ export const scenario = {
           "Исследование рынка труда под конкретные редкие роли: где специалисты, ожидания, конкурентная среда для найма.",
         price: "от 400 000 ₽",
         cta: "Обсудить исследование",
-        url: "https://luktrud.ru/#product?utm_source=quiz",
+        url: "https://luktrud.ru/?utm_source=quiz#product",
       },
     },
 
@@ -246,7 +246,7 @@ export const scenario = {
           "Диагностика кадровых причин операционных проблем: производительность, удержание, качество найма. Рекомендации с рыночным контекстом.",
         price: "от 250 000 ₽",
         cta: "Записаться на сессию",
-        url: "https://luktrud.ru/#product?utm_source=quiz",
+        url: "https://luktrud.ru/?utm_source=quiz#product",
       },
     },
   },

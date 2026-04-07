@@ -214,7 +214,7 @@ function renderLeadMagnet() {
       <div id="lm-result" class="lm-result hidden"></div>
       <div id="lm-contact-form" class="lm-contact-form hidden">
         <p class="lm-contact-title">Получи полный материал</p>
-        <input type="text" id="lm-contact" class="lm-input" placeholder="Email или Telegram (@username)" />
+        <input type="email" id="lm-contact" class="lm-input" placeholder="Твой email" />
         <button class="btn btn-lm" id="lm-send">Отправить</button>
         <p class="lm-thanks hidden" id="lm-thanks">✓ Сергей пришлёт материалы в течение дня</p>
       </div>

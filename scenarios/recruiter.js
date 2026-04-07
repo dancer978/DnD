@@ -353,7 +353,7 @@ export const scenario = {
           "Актуальные данные по ставкам, структуре офферов и трендам найма в вашей отрасли. Готово к использованию.",
         price: "50–120 000 ₽",
         cta: "Получить отчёт",
-        url: "https://luktrud.ru/#product?utm_source=quiz",
+        url: "https://luktrud.ru/?utm_source=quiz#product",
       },
     },
 
@@ -370,7 +370,7 @@ export const scenario = {
           "Разбор вашей конкретной ситуации с экспертом по рынку труда. Ответы на вопросы, которые не решают статьи и стандартные отчёты.",
         price: "от 250 000 ₽",
         cta: "Записаться на сессию",
-        url: "https://luktrud.ru/#product?utm_source=quiz",
+        url: "https://luktrud.ru/?utm_source=quiz#product",
       },
     },
 
@@ -387,7 +387,7 @@ export const scenario = {
           "Полное исследование рынка труда под вашу отрасль, задачи и конкурентную среду. Методология, данные, выводы.",
         price: "от 400 000 ₽",
         cta: "Обсудить исследование",
-        url: "https://luktrud.ru/#product?utm_source=quiz",
+        url: "https://luktrud.ru/?utm_source=quiz#product",
       },
     },
   },
