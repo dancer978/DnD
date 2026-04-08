@@ -35,7 +35,14 @@ let state = {
 
 // ─── Entry point ─────────────────────────────────────────────────────────────
 export function init() {
-  renderCharacterSelect();
+  const params = new URLSearchParams(window.location.search);
+  const charId = params.get("character");
+  if (charId && SCENARIOS[charId]) {
+    state.characterId = charId;
+    navigateTo(SCENARIOS[charId].startNode);
+  } else {
+    renderCharacterSelect();
+  }
 }
 
 // ─── Screens ─────────────────────────────────────────────────────────────────
@@ -181,9 +188,10 @@ function renderEnding(node, character) {
         </div>
 
         <div class="ending-actions">
-          <button class="btn btn-secondary" id="restart-btn">
-            ↩ Начать заново
-          </button>
+          <button class="btn btn-share" id="share-btn">↗ Поделиться результатом</button>
+          <button class="btn btn-refer" id="refer-btn">👥 Отправить коллеге</button>
+          <div id="refer-picker" class="refer-picker hidden"></div>
+          <button class="btn btn-secondary" id="restart-btn">↩ Начать заново</button>
         </div>
       </div>
     </div>
@@ -191,6 +199,47 @@ function renderEnding(node, character) {
 
   document.getElementById("restart-btn").addEventListener("click", () => {
     renderCharacterSelect();
+  });
+
+  document.getElementById("share-btn").addEventListener("click", () => {
+    const text = `Я прошёл квест как ${character.name}. Путь завершился на «${svc.name}».\nА ты кто? quiz.luktrud.ru`;
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = document.getElementById("share-btn");
+      btn.textContent = "✓ Скопировано";
+      setTimeout(() => { btn.textContent = "↗ Поделиться результатом"; }, 2000);
+    });
+  });
+
+  document.getElementById("refer-btn").addEventListener("click", () => {
+    const picker = document.getElementById("refer-picker");
+    if (!picker.classList.contains("hidden")) {
+      picker.classList.add("hidden");
+      return;
+    }
+    const chars = Object.values(SCENARIOS).map((s) => s.character);
+    picker.innerHTML = `
+      <p class="refer-title">Кому отправить?</p>
+      <div class="refer-list">
+        ${chars.map((c) => `
+          <button class="refer-item" data-id="${c.id}" data-name="${c.name}">
+            <strong>${c.name}</strong><span class="refer-role">${c.role}</span>
+          </button>
+        `).join("")}
+      </div>
+    `;
+    picker.classList.remove("hidden");
+    picker.querySelectorAll(".refer-item").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const name = btn.dataset.name;
+        const id = btn.dataset.id;
+        const url = `https://quiz.luktrud.ru/?character=${id}`;
+        const text = `Думаю, ты ${name} — пройди квест: ${url}`;
+        navigator.clipboard.writeText(text).then(() => {
+          picker.innerHTML = `<p class="refer-copied">✓ Ссылка скопирована</p>`;
+          setTimeout(() => picker.classList.add("hidden"), 2000);
+        });
+      });
+    });
   });
 
   initLeadMagnet();
